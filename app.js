@@ -1,181 +1,293 @@
 /* ==========================================================================
-   THE 115-MARK GAUNTLET - GAMEPLAY ENGINE & SYNTHESIZER
+   THE 115-MARK GAUNTLET - GAMEPLAY ENGINE & SYNTHESIZER (20-QUESTION EXPANDED)
    ========================================================================== */
 
-// 1. Question Bank Database
+// 1. Question Bank Database (20 Questions - 5 per Sector)
 const QUESTIONS = [
-  // ==================== SECTOR 1: BIOLOGY HUB (15 Marks) ====================
+  // ==================== SECTOR 1: BIOLOGY HUB (23 Marks) ====================
   {
     sector: 1,
     sectorName: "Biology Hub",
-    marks: 5,
-    question: "Euglena is a unicellular eukaryotic organism that shares characteristics with plants, but also differs significantly. Which of the following structures is present in Euglena but absent in a typical terrestrial plant cell?",
+    marks: 4,
+    question: "A student is labeling a 2D diagram of a typical plant cell. Which of the following organelle groups is responsible for: (1) converting glucose into usable cellular energy (ATP), (2) synthesizing carbohydrates via photosynthesis, and (3) maintaining cell turgor pressure?",
     options: [
-      "Chloroplast",
-      "Flagellum",
-      "Nucleus",
-      "Cell Membrane"
-    ],
-    correctIndex: 1,
-    explanation: "Euglena is motile and possesses a whip-like flagellum for movement, whereas typical terrestrial plant cells are stationary and lack flagella. Both possess chloroplasts (for photosynthesis), nuclei, and cell membranes."
-  },
-  {
-    sector: 1,
-    sectorName: "Biology Hub",
-    marks: 5,
-    question: "Which of the following digestive organs is correctly matched with its primary physiological function in the human body?",
-    options: [
-      "Stomach - Main site of nutrient absorption into the blood",
-      "Large Intestine - Absorption of water and mineral salts from undigested food residue",
-      "Small Intestine - Storage of feces and production of concentrated hydrochloric acid",
-      "Esophagus - Mechanical digestion of proteins using specialized protease enzymes"
-    ],
-    correctIndex: 1,
-    explanation: "The large intestine primarily reabsorbs water and dissolved mineral salts from remaining undigested matter, converting it to solid feces. The small intestine is the main site of chemical digestion and nutrient absorption."
-  },
-  {
-    sector: 1,
-    sectorName: "Biology Hub",
-    marks: 5,
-    question: "To confirm the presence of starch in a green plant leaf during a laboratory investigation, which chemical reagent is used, and what is the exact color transition observed for a positive result?",
-    options: [
-      "Benedict's Solution; changes from light blue to a brick-red precipitate",
-      "Biuret Reagent; changes from light blue to a deep violet-purple",
-      "Iodine Solution; changes from yellow-brown (amber) to deep blue-black",
-      "Ethanol Emulsion; changes from clear to a cloudy white suspension"
-    ],
-    correctIndex: 2,
-    explanation: "A positive starch test is confirmed when Iodine solution shifts from its native yellow-brown/amber color to a distinct dark blue-black. Benedict's tests for reducing sugars, Biuret for proteins, and Ethanol for lipids."
-  },
-  // ==================== SECTOR 2: CHEMISTRY PLAYGROUND (25 Marks) ====================
-  {
-    sector: 2,
-    sectorName: "Chemistry Playground",
-    marks: 8,
-    question: "What is the correct electron shell configuration for a neutral Calcium atom (atomic number 20) in its stable ground state?",
-    options: [
-      "2, 8, 10",
-      "2, 8, 8, 2",
-      "2, 8, 6, 4",
-      "2, 2, 8, 8"
-    ],
-    correctIndex: 1,
-    explanation: "Calcium has 20 electrons. The energy levels fill sequentially: the first shell holds a maximum of 2, the second holds 8, the third holds 8, and the final two valence electrons occupy the fourth shell, yielding: 2, 8, 8, 2."
-  },
-  {
-    sector: 2,
-    sectorName: "Chemistry Playground",
-    marks: 8,
-    isHydrogenPop: true,
-    question: "A student performs a gas confirmation test. When a lit wooden splint is placed at the mouth of the test tube, a distinct 'squeaky pop' sound is heard. What reaction causes this sound signature, and which gas is present?",
-    options: [
-      "Carbon dioxide gas extinguishing the flame",
-      "Oxygen gas accelerating the combustion of the wood",
-      "Hydrogen gas rapidly reacting with atmospheric oxygen in an explosive combustion",
-      "Nitrogen gas reacting with carbon to produce nitrogen dioxide"
-    ],
-    correctIndex: 2,
-    explanation: "The 'squeaky pop' test is the classic confirmation for hydrogen gas (H₂). The pop is a miniature explosion resulting from the rapid, exothermic combustion of hydrogen gas reacting with oxygen: 2H₂ + O₂ -> 2H₂O."
-  },
-  {
-    sector: 2,
-    sectorName: "Chemistry Playground",
-    marks: 9,
-    question: "Which of the following statements correctly describes and explains the vertical periodic trend in reactivity down Group 1 (alkali metals) compared to Group 17 (halogens)?",
-    options: [
-      "Group 1 reactivity decreases down the group; Group 17 reactivity increases down the group",
-      "Group 1 reactivity increases down the group because valence electrons are further from the nucleus and more easily lost; Group 17 reactivity decreases down the group because increased shielding makes it harder to attract an incoming electron",
-      "Both Group 1 and Group 17 reactivity increase down their respective groups due to increasing atomic mass and neutron numbers",
-      "Group 1 reactivity increases down the group because electronegativity increases; Group 17 reactivity increases because atomic radius decreases"
-    ],
-    correctIndex: 1,
-    explanation: "Down Group 1, outer electrons are further from the positive nucleus, shielded by more electron shells, reducing electrostatic attraction and making the valence electron easier to lose (increasing reactivity). Down Group 17, increased shielding reduces the nucleus's ability to attract an incoming electron, decreasing reactivity."
-  },
-  // ==================== SECTOR 3: PHYSICS LAB (35 Marks) ====================
-  {
-    sector: 3,
-    sectorName: "Physics Lab",
-    marks: 10,
-    question: "During a physics lab session, a model rocket is launched and travels a distance of 288 meters in exactly 18 seconds at a constant speed. What is its average velocity (v)?",
-    options: [
-      "16 m/s",
-      "5,184 m/s",
-      "0.0625 m/s",
-      "18 m/s"
+      "(1) Mitochondria, (2) Chloroplast, (3) Vacuole",
+      "(1) Ribosome, (2) Vacuole, (3) Cell Wall",
+      "(1) Chloroplast, (2) Mitochondria, (3) Cytoplasm",
+      "(1) Nucleus, (2) Chloroplast, (3) Cell Membrane"
     ],
     correctIndex: 0,
-    explanation: "Velocity is calculated using the formula v = d / t. Substituting the given values: v = 288 meters / 18 seconds = 16 meters per second."
+    explanation: "Mitochondria are the sites of aerobic respiration, converting glucose to ATP. Chloroplasts carry out photosynthesis to produce glucose. The large central vacuole stores cell sap and maintains turgidity (turgor pressure)."
+  },
+  {
+    sector: 1,
+    sectorName: "Biology Hub",
+    marks: 4,
+    question: "Euglena is a single-celled flagellate eukaryote that challenges traditional plant/animal classification. What cell structure features explain this exception?",
+    options: [
+      "They possess chloroplasts for photosynthesis but lack a rigid cell wall and use a flagellum for movement",
+      "They have a cellulose cell wall but move using flagellar tails and digest food in a stomach",
+      "They lack a true nucleus but have a flagellum and a large central vacuole",
+      "They possess cilia for locomotion but can only consume nutrients from their food reservoir"
+    ],
+    correctIndex: 0,
+    explanation: "Euglena is plant-like because it has chloroplasts to synthesize its own food, but animal-like because it lacks a cellulose cell wall (having a protein pellicle instead) and is highly motile due to a flagellum."
+  },
+  {
+    sector: 1,
+    sectorName: "Biology Hub",
+    marks: 5,
+    question: "During chemical and mechanical digestion in the human body, how are the stomach and small intestine correctly matched to their primary biochemical and digestive roles?",
+    options: [
+      "Stomach: Acidic hydrolysis of proteins and mechanical churning; Small Intestine: Enzymatic digestion and absorption of nutrients into the bloodstream",
+      "Stomach: Absorption of water and minerals; Small Intestine: Production of bile and mechanical grinding",
+      "Stomach: Storage of bile and synthesis of lipase; Small Intestine: Secretion of strong hydrochloric acid (pH 1-2)",
+      "Stomach: Alkaline absorption of fats; Small Intestine: Storage of solid feces"
+    ],
+    correctIndex: 0,
+    explanation: "The stomach uses peristaltic churning (mechanical) and pepsin in an acidic environment (HCl, pH 1-2) to break down proteins. The small intestine uses pancreatic/intestinal enzymes to complete digestion and absorbs the resulting nutrients."
+  },
+  {
+    sector: 1,
+    sectorName: "Biology Hub",
+    marks: 5,
+    question: "According to the 'Lock and Key' model, which statement correctly describes the behavior of enzymes as biological catalysts during and after a chemical reaction?",
+    options: [
+      "They change shape permanently to bind to any reactant molecule, and are consumed in the process",
+      "They lower activation energy, bind to specific substrates at their active site, and remain chemically unchanged after the reaction",
+      "They speed up reactions by increasing the system's temperature, and break down into amino acids",
+      "They work best at any temperature and pH, acting as reactants in the cellular process"
+    ],
+    correctIndex: 1,
+    explanation: "Enzymes speed up chemical reactions by lowering the activation energy barrier. Substrates bind specifically to the active site. After the reaction, products are released, and the enzyme remains unchanged and ready to catalyze again."
+  },
+  {
+    sector: 1,
+    sectorName: "Biology Hub",
+    marks: 5,
+    question: "In a laboratory study evaluating photosynthesis, a student performs an iodine starch test on a green leaf that was partially covered with light-blocking foil. What are the observed properties and explanation?",
+    options: [
+      "The uncovered parts turn blue-black because light-exposed cells carried out photosynthesis to produce starch, which complexes with iodine",
+      "The covered parts turn brick-red because starch is converted into simple reducing sugars",
+      "The uncovered parts turn bright green because iodine stains the chlorophyll green",
+      "The covered parts turn blue-black because darkness accelerates starch storage"
+    ],
+    correctIndex: 0,
+    explanation: "Photosynthesis requires light. The light-exposed (uncovered) parts of the leaf produce glucose, which is stored as starch. Iodine reacts with starch to turn blue-black. Covered parts have no starch and remain yellow-brown."
+  },
+  // ==================== SECTOR 2: CHEMISTRY PLAYGROUND (28 Marks) ====================
+  {
+    sector: 2,
+    sectorName: "Chemistry Playground",
+    marks: 5,
+    question: "How is a chemical compound distinguished from an element, and how are elements organized within the rows (periods) and columns (groups) of the Periodic Table?",
+    options: [
+      "Compounds contain only one type of atom; periods contain elements with the same number of valence electrons",
+      "Compounds consist of two or more chemically bonded elements; periods represent the number of electron shells, while groups represent the number of valence electrons",
+      "Elements are mixtures of compounds; groups contain elements with similar masses",
+      "Compounds are physically mixed substances; periods represent atomic mass, and groups represent states of matter"
+    ],
+    correctIndex: 1,
+    explanation: "A compound contains atoms of different elements chemically bonded. In the Periodic Table, horizontal rows (periods) indicate the number of electron shells, and vertical columns (groups) represent the count of valence electrons."
+  },
+  {
+    sector: 2,
+    sectorName: "Chemistry Playground",
+    marks: 5,
+    question: "A student is testing a mystery element in the laboratory. She observes that it rings loudly when struck, can be drawn into thin wires, can be hammered into flat sheets, and reflects light. What terms describe these four physical properties?",
+    options: [
+      "Malleable, Ductile, Lustrous, Sonorous",
+      "Sonorous, Ductile, Malleable, Lustrous",
+      "Lustrous, Sonorous, Malleable, Ductile",
+      "Ductile, Lustrous, Malleable, Sonorous"
+    ],
+    correctIndex: 1,
+    explanation: "Sonorous means producing a ringing sound when struck; ductile means able to be drawn into wires; malleable means able to be hammered into sheets; lustrous means shiny and reflective. These are classic metallic properties."
+  },
+  {
+    sector: 2,
+    sectorName: "Chemistry Playground",
+    marks: 6,
+    question: "According to atomic structure shell constraints for elements up to atomic number 20, what are the maximum capacities of the first three electron shells, and what is the configuration of a chlorine atom (atomic number 17)?",
+    options: [
+      "Capacity: 2, 8, 8; Configuration: 2, 8, 7",
+      "Capacity: 8, 8, 8; Configuration: 2, 8, 7",
+      "Capacity: 2, 8, 18; Configuration: 2, 8, 5, 2",
+      "Capacity: 2, 8, 8; Configuration: 2, 10, 5"
+    ],
+    correctIndex: 0,
+    explanation: "The first shell holds up to 2, the second up to 8, and the third up to 8 (for the first 20 elements). A chlorine atom has 17 electrons, meaning they arrange as 2 in the first shell, 8 in the second, and 7 in the third (2, 8, 7)."
+  },
+  {
+    sector: 2,
+    sectorName: "Chemistry Playground",
+    marks: 6,
+    question: "Caesium (atomic number 55) is located at the bottom of Group 1 (Alkali Metals). Why does Caesium react much more violently with water than sodium or potassium?",
+    options: [
+      "Caesium has more valence electrons, which are highly reactive",
+      "Caesium's valence electron is in an outer shell further from the nucleus, experiencing higher shielding and weaker electrostatic attraction, making it extremely easy to lose",
+      "Caesium has high electronegativity and aggressively attracts oxygen from water molecules",
+      "Caesium has a higher boiling point, which accelerates the release of thermal energy"
+    ],
+    correctIndex: 1,
+    explanation: "Reactivity of Group 1 metals increases down the group. As atomic radius and shielding from inner shells increase, the positive nucleus exerts a weaker electrostatic pull on the single valence electron, making it easier to lose."
+  },
+  {
+    sector: 2,
+    sectorName: "Chemistry Playground",
+    marks: 6,
+    isHydrogenPop: true,
+    question: "During a metal-acid reaction, a gas is produced that makes a 'squeaky pop' sound with a lit splint. If universal indicator is added to the acid beforehand and after the reaction is completed with excess metal, what gas was released, and how does the indicator color shift?",
+    options: [
+      "Oxygen gas; color shifts from green (pH 7) to blue (alkaline)",
+      "Hydrogen gas; color shifts from warm red (acidic) towards neutral green (as acid is neutralized)",
+      "Carbon dioxide; color shifts from red (acidic) to deep purple (alkaline)",
+      "Hydrogen gas; color shifts from purple (alkaline) to neutral green"
+    ],
+    correctIndex: 1,
+    explanation: "Acids react with metals to produce salt and hydrogen gas (H₂), which is flammable and squeaks when ignited. As the hydrogen ions (H⁺) in the acid react, the pH rises, shifting the universal indicator from red (strongly acidic) towards green (neutral)."
+  },
+  // ==================== SECTOR 3: PHYSICS LAB (31 Marks) ====================
+  {
+    sector: 3,
+    sectorName: "Physics Lab",
+    marks: 6,
+    question: "A cyclist rides along a straight path. She covers a distance of 1.8 kilometers in exactly 4 minutes. What is her average speed in meters per second (m/s)?",
+    options: [
+      "0.45 m/s",
+      "7.5 m/s",
+      "450 m/s",
+      "4.5 m/s"
+    ],
+    correctIndex: 1,
+    explanation: "Convert distance to meters: 1.8 km = 1800 m. Convert time to seconds: 4 minutes = 240 s. Speed is calculated as v = d / t = 1800 m / 240 s = 7.5 m/s."
   },
   {
     sector: 3,
     sectorName: "Physics Lab",
-    marks: 12,
-    question: "An electrical circuit features a power source connected to Bulb A in series with a parallel combination of two identical bulbs (Bulb B and Bulb C). Assuming all bulbs are identical and the power source has negligible internal resistance, which statement is true regarding their brightness?",
+    marks: 6,
+    question: "In an electrical circuit, how must an ammeter and a voltmeter be connected to measure a resistor, and what is the electrical rationale behind these connections?",
     options: [
-      "Bulb A is dimmer than Bulbs B and C",
-      "All three bulbs (A, B, and C) glow with identical brightness",
-      "Bulb A is the brightest, while Bulbs B and C are equally bright but dimmer than A",
-      "Bulb B and C are brighter than Bulb A because they are in parallel"
+      "Ammeter in series (has very low resistance to avoid altering current); Voltmeter in parallel (has very high resistance to avoid drawing current)",
+      "Ammeter in parallel (has high resistance); Voltmeter in series (has low resistance)",
+      "Both in parallel (both have low resistance)",
+      "Both in series (both have high resistance)"
     ],
-    correctIndex: 2,
-    explanation: "The full circuit current must flow through Bulb A before splitting equally at the parallel junction between Bulb B and Bulb C. Since electrical power (and thus brightness) depends on current, Bulb A is the brightest, and Bulbs B and C are equally dim."
+    correctIndex: 0,
+    explanation: "Ammeters must be in series to count charge passing through. They have low resistance to avoid affecting flow. Voltmeters must be in parallel across a component to measure work done per charge, and have high resistance so current bypasses them."
   },
   {
     sector: 3,
     sectorName: "Physics Lab",
-    marks: 13,
-    question: "To correctly measure the electric current flowing through a resistor and the potential difference across it, how must an ammeter and a voltmeter be connected, and what is the direction of conventional current in the external circuit?",
+    marks: 6,
+    question: "In electrical circuit schematics, how does the direction of conventional current compare to the physical flow of electrons?",
     options: [
-      "Ammeter in parallel, voltmeter in series, current flows from negative to positive",
-      "Ammeter in series, voltmeter in parallel, current flows from positive to negative",
-      "Both meters in series, current flows from positive to negative",
-      "Ammeter in series, voltmeter in parallel, current flows from negative to positive"
+      "Conventional current flows from the positive terminal to the negative terminal, which is opposite to the direction of electron flow",
+      "Conventional current flows from negative to positive, which is identical to electron flow",
+      "Both current and electrons flow from positive to negative",
+      "Conventional current flows from negative to positive, which is opposite to electron flow"
+    ],
+    correctIndex: 0,
+    explanation: "Conventional current was defined as positive charge flow from positive (+) to negative (-). We now know that electrons are negative charges that flow from the negative (-) terminal to the positive (+) terminal, making the directions opposite."
+  },
+  {
+    sector: 3,
+    sectorName: "Physics Lab",
+    marks: 6,
+    question: "A student places iron filings around a bar magnet. What is the direction of the magnetic field lines, and how do they behave near the poles of the magnet?",
+    options: [
+      "They run from the South pole to the North pole, and are furthest apart near the poles",
+      "They run from the North pole to the South pole, and are most concentrated near the poles where the force is strongest",
+      "They form concentric circles centered on the middle of the magnet, flowing outwards",
+      "They run randomly between poles, and are weakest near the pole faces"
     ],
     correctIndex: 1,
-    explanation: "Ammeters have near-zero resistance and must be connected in series to measure current. Voltmeters have extremely high resistance and must be connected in parallel to measure voltage. Conventional current is defined as flowing from the positive terminal to the negative terminal."
+    explanation: "Magnetic field lines flow from the North pole to the South pole externally. The lines are most concentrated (densest) at the poles, representing where the magnetic flux density and magnetic strength are at a maximum."
   },
-  // ==================== SECTOR 4: METHODOLOGY SKILLS (40 Marks) ====================
   {
-    sector: 4,
-    sectorName: "Methodology Skills",
-    marks: 12,
-    question: "A student sets up an investigation to see how the volume of water added daily (20 mL, 50 mL, 100 mL) affects the growth height of sunflower plants over a 3-week period. She keeps soil type, pot size, and sunlight exposure identical for all plants. What are the independent and dependent variables in this study?",
+    sector: 3,
+    sectorName: "Physics Lab",
+    marks: 7,
+    question: "A heavy steel ball is released from rest at the top of a curved ramp. As it rolls down, what energy transformations occur, and how does the Law of Conservation of Energy apply if thermal energy is detected?",
     options: [
-      "Independent variable: Height of the plant; Dependent variable: Volume of water",
-      "Independent variable: Volume of water; Dependent variable: Height of the plant",
-      "Independent variable: Soil type; Dependent variable: Sunlight exposure",
-      "Independent variable: Height of the plant; Dependent variable: Duration of the experiment (3 weeks)"
+      "Kinetic energy transforms into potential energy, destroying heat",
+      "Gravitational potential energy transforms into kinetic energy, and some energy is converted to thermal energy due to friction, but the total energy remains constant",
+      "Thermal energy transforms into potential energy, creating new kinetic energy",
+      "Kinetic energy is converted entirely into electrical energy, violating the conservation of energy"
     ],
     correctIndex: 1,
-    explanation: "The independent variable is the factor deliberately manipulated by the experimenter (volume of water). The dependent variable is the factor being measured or observed in response (plant growth height). Soil, pot size, and sunlight are controlled variables."
+    explanation: "At the top, energy is stored as gravitational potential energy. Downwards, it converts to kinetic energy of movement. Friction turns a portion into thermal energy (heat). Total energy remains constant, matching the Law of Conservation of Energy."
+  },
+  // ==================== SECTOR 4: SKILLS & METHODOLOGY (33 Marks) ====================
+  {
+    sector: 4,
+    sectorName: "Methodology Skills",
+    marks: 6,
+    question: "A student investigates how the size of zinc particles (powder vs large chunks) affects the rate of reaction with hydrochloric acid by measuring the volume of hydrogen gas produced every 10 seconds. She keeps the temperature, volume, and concentration of the acid identical. What are the independent, dependent, and controlled variables?",
+    options: [
+      "Independent: Size of zinc particles; Dependent: Volume of hydrogen gas; Controlled: Temperature, volume, and concentration of acid",
+      "Independent: Temperature of acid; Dependent: Size of zinc particles; Controlled: Volume of hydrogen gas",
+      "Independent: Volume of hydrogen gas; Dependent: Concentration of acid; Controlled: Zinc particle size",
+      "Independent: Rate of reaction; Dependent: Temperature; Controlled: Volume of hydrogen gas"
+    ],
+    correctIndex: 0,
+    explanation: "The independent variable is what you change (zinc particle size). The dependent variable is what you measure (volume of hydrogen gas). Controlled variables are what you keep identical (acid volume, concentration, temperature) to make the test fair."
   },
   {
     sector: 4,
     sectorName: "Methodology Skills",
-    marks: 13,
-    question: "You need to transfer exactly 25.0 mL of a liquid reactant into a conical flask for a precise neutralization reaction. Which of the following apparatus is designed to deliver a single, highly precise fixed volume of liquid, rather than variable or approximate volumes?",
+    marks: 6,
+    question: "An engineering test measures how much a wooden plank sags (in mm) when different weights (1 kg, 5 kg, 10 kg) are placed at its center. The plank length, width, and wood type are kept identical. Identify the independent and dependent variables.",
     options: [
-      "Beaker",
-      "Graduated Measuring Cylinder",
-      "Volumetric Pipette",
-      "Conical Flask"
+      "Independent: Sag of the plank; Dependent: Applied weight",
+      "Independent: Applied weight; Dependent: Sag of the plank",
+      "Independent: Plank length; Dependent: Wood type",
+      "Independent: Wood type; Dependent: Applied weight"
     ],
-    correctIndex: 2,
-    explanation: "A volumetric pipette is calibrated to dispense a single, extremely precise volume (e.g. exactly 25.0 mL) with very low uncertainty. Measuring cylinders measure variable volumes with lower precision, while beakers and conical flasks only provide rough approximations."
+    correctIndex: 1,
+    explanation: "The independent variable is the weight added, which is directly manipulated. The dependent variable is the plank's sag depth in millimeters, which changes in response to the weight and is measured."
   },
   {
     sector: 4,
     sectorName: "Methodology Skills",
-    marks: 15,
-    question: "During an investigation on reaction rates, a student records the time taken for a magnesium ribbon to fully dissolve in various concentrations of hydrochloric acid (0.5 M, 1.0 M, 2.0 M). The measured times are 180 s, 90 s, and 45 s respectively. Which scientific conclusion is best supported by this quantitative dataset?",
+    marks: 7,
+    question: "When reacting zinc metal with concentrated hydrochloric acid, what is the most critical set of safety precautions, and what scientific hazard reasoning supports them?",
     options: [
-      "Increasing acid concentration decreases the overall rate of reaction",
-      "The dissolution time is directly proportional to the acid concentration",
-      "Doubling the concentration of hydrochloric acid halves the reaction time, indicating the rate of reaction is directly proportional to concentration",
-      "Temperature is the primary variable controlling this reaction rate"
+      "Wear safety goggles to protect eyes from corrosive acid splashes, and handle near a ventilation source or open flame because hydrogen gas is highly flammable",
+      "Wear safety goggles to prevent eye damage from corrosive acid, and ensure there are no open flames nearby because hydrogen gas forms an explosive mixture with air",
+      "Wear thermal gloves to prevent heat burns, and seal the test tube tightly to prevent gas release",
+      "Avoid wearing lab coats to ensure free movement, and inhale the gas to verify its purity"
+    ],
+    correctIndex: 1,
+    explanation: "Safety goggles are essential to protect eyes from corrosive acid splashes. Since the reaction produces hydrogen gas, which is highly flammable and forms explosive mixtures with oxygen, open flames must be eliminated from the testing area."
+  },
+  {
+    sector: 4,
+    sectorName: "Methodology Skills",
+    marks: 7,
+    question: "A student needs to heat a solid chemical mixture to a very high temperature in a furnace directly over a Bunsen burner flame. Which lab apparatus is designed to hold the solid chemical under these conditions, and what is its 2D profile name?",
+    options: [
+      "A beaker made of glass",
+      "A conical flask made of borosilicate",
+      "A crucible and lid, made of heat-resistant porcelain",
+      "An evaporating basin, made of plastic"
     ],
     correctIndex: 2,
-    explanation: "Doubling concentration (0.5M -> 1.0M -> 2.0M) halves the time (180s -> 90s -> 45s). Since rate is inversely proportional to time (Rate = 1/time), halving the reaction time means the reaction rate is doubled. Thus, the rate of reaction is directly proportional to the concentration."
+    explanation: "A crucible is a cup-shaped piece of laboratory equipment made of heat-resistant porcelain designed to withstand temperatures high enough to melt metals. Glass beakers and flasks would crack under direct extreme heat."
+  },
+  {
+    sector: 4,
+    sectorName: "Methodology Skills",
+    marks: 7,
+    question: "A study tests the color intensity of hair dye at concentrations of 1%, 5%, and 10%. The light absorption values are recorded as 0.15, 0.75, and 1.50 respectively. What quantitative conclusion can be drawn from this data?",
+    options: [
+      "Increasing dye concentration decreases light absorption",
+      "The light absorption is directly proportional to the dye concentration",
+      "Light absorption is independent of the dye concentration",
+      "Doubling the concentration quadruples the absorption value"
+    ],
+    correctIndex: 1,
+    explanation: "A 5x increase in concentration (1% to 5%) causes a 5x increase in absorption (0.15 to 0.75). A 10x increase in concentration (1% to 10%) causes a 10x increase in absorption (0.15 to 1.50). This indicates a direct proportional relationship."
   }
 ];
 
@@ -191,7 +303,6 @@ function initAudio() {
   }
 }
 
-// Synthesize pleasant correct chime
 function playCorrectSound() {
   initAudio();
   const osc1 = audioCtx.createOscillator();
@@ -210,7 +321,6 @@ function playCorrectSound() {
   gainNode.gain.linearRampToValueAtTime(0.12, now + 0.05);
   gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
 
-  // Nice high chord chime (E5 -> A5)
   osc1.frequency.setValueAtTime(659.25, now); // E5
   osc2.frequency.setValueAtTime(880.00, now + 0.08); // A5
 
@@ -220,7 +330,6 @@ function playCorrectSound() {
   osc2.stop(now + 0.5);
 }
 
-// Synthesize squeaky pop sound (special hydrogen effect)
 function playSqueakyPopSound() {
   initAudio();
   const now = audioCtx.currentTime;
@@ -243,7 +352,7 @@ function playSqueakyPopSound() {
   oscSqueak.start(now);
   oscSqueak.stop(now + 0.1);
   
-  // Part 2: The Pop (low frequency pulse/noise burst)
+  // Part 2: The Pop (low frequency pulse)
   const oscPop = audioCtx.createOscillator();
   const gainPop = audioCtx.createGain();
   
@@ -262,7 +371,6 @@ function playSqueakyPopSound() {
   oscPop.stop(now + 0.25);
 }
 
-// Synthesize incorrect buzzer
 function playIncorrectSound() {
   initAudio();
   const osc = audioCtx.createOscillator();
@@ -277,7 +385,6 @@ function playIncorrectSound() {
   gainNode.gain.linearRampToValueAtTime(0.15, now + 0.05);
   gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
 
-  // Descending buzz
   osc.frequency.setValueAtTime(130, now);
   osc.frequency.linearRampToValueAtTime(90, now + 0.35);
 
@@ -285,7 +392,6 @@ function playIncorrectSound() {
   osc.stop(now + 0.4);
 }
 
-// Synthesize sector unlock fanfare
 function playSectorUnlockedSound() {
   initAudio();
   const now = audioCtx.currentTime;
@@ -310,11 +416,10 @@ function playSectorUnlockedSound() {
   });
 }
 
-// Synthesize sad game over tune
 function playGameOverSound() {
   initAudio();
   const now = audioCtx.currentTime;
-  const notes = [220.00, 207.65, 196.00, 164.81]; // A3, G#3, G3, E3 (sad descent)
+  const notes = [220.00, 207.65, 196.00, 164.81]; // A3, G#3, G3, E3
   
   notes.forEach((freq, index) => {
     const osc = audioCtx.createOscillator();
@@ -335,12 +440,9 @@ function playGameOverSound() {
   });
 }
 
-// Synthesize grand victory fanfare
 function playVictorySound() {
   initAudio();
   const now = audioCtx.currentTime;
-  
-  // Celebratory chords and arpeggio (C4 -> E4 -> G4 -> C5 -> E5 -> G5 -> C6)
   const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
   
   notes.forEach((freq, index) => {
@@ -361,7 +463,6 @@ function playVictorySound() {
     osc.stop(now + (index * 0.08) + 0.75);
   });
 
-  // Add a fat final sustained chord (C4 + G4 + C5 + E5)
   setTimeout(() => {
     const chord = [261.63, 392.00, 523.25, 659.25];
     chord.forEach((freq) => {
@@ -414,11 +515,11 @@ function shuffleQuestions() {
 let gameState = {
   score: 0,
   lives: 3,
-  currentQuestionIdx: 0, // 0 to 11 absolute
+  currentQuestionIdx: 0, // 0 to 19 absolute
   timeLeft: 720,        // 12 minutes (720 seconds) per sector
   timerInterval: null,
   sectorTimes: {
-    1: 0, // cumulative time spent per sector
+    1: 0,
     2: 0,
     3: 0,
     4: 0
@@ -481,19 +582,14 @@ function initGame() {
     gameState.timerInterval = null;
   }
 
-  // Set default theme class
   bodyEl.className = 'theme-biology';
-
-  // Render original hearts
   updateLivesUI();
 
-  // Reset displays
   scoreDisplay.innerHTML = `0 <span class="score-total">/ 115</span>`;
   progressBarFill.style.width = '0%';
   countdownTimer.textContent = "12:00";
   countdownTimer.classList.remove('urgent');
 
-  // Show welcome, hide others
   welcomeScreen.classList.remove('hidden');
   questionScreen.classList.add('hidden');
   feedbackPanel.classList.add('hidden');
@@ -506,18 +602,15 @@ function initGame() {
 function startGame() {
   initAudio();
   
-  // Reset game state completely
   gameState.score = 0;
   gameState.lives = 3;
   gameState.currentQuestionIdx = 0;
   gameState.timeLeft = 720;
   gameState.sectorTimes = { 1: 0, 2: 0, 3: 0, 4: 0 };
 
-  // Shuffle questions for this run
   shuffleQuestions();
-
-  // Reset UI elements
   updateLivesUI();
+
   scoreDisplay.innerHTML = `0 <span class="score-total">/ 115</span>`;
   progressBarFill.style.width = '0%';
   countdownTimer.textContent = "12:00";
@@ -548,7 +641,6 @@ function startSectorTimer() {
     gameState.timeLeft--;
     updateTimerDisplay();
 
-    // Visual warning when under 60 seconds
     if (gameState.timeLeft <= 60) {
       countdownTimer.classList.add('urgent');
     }
@@ -561,7 +653,6 @@ function startSectorTimer() {
   }, 1000);
 }
 
-// Update clock text
 function updateTimerDisplay() {
   const mins = Math.floor(gameState.timeLeft / 60);
   const secs = gameState.timeLeft % 60;
@@ -572,23 +663,19 @@ function updateTimerDisplay() {
 function loadQuestion(index) {
   const q = activeQuestions[index];
   
-  // Set theme class on body for sector shifts
   if (q.sector === 1) bodyEl.className = 'theme-biology';
   else if (q.sector === 2) bodyEl.className = 'theme-chemistry';
   else if (q.sector === 3) bodyEl.className = 'theme-physics';
   else if (q.sector === 4) bodyEl.className = 'theme-methodology';
 
-  // Update Sector Badge
   sectorBadge.textContent = `SECTOR ${q.sector}: ${q.sectorName.toUpperCase()}`;
   sectorBadge.className = `sector-badge sector-${q.sector}`;
 
-  // Update Question Tracker
-  const sectorQIndex = (index % 3) + 1;
+  const sectorQIndex = (index % 5) + 1; // 5 questions per sector now
   questionNumEl.textContent = sectorQIndex;
   questionValueEl.textContent = `+${q.marks} MARKS`;
   questionTextEl.textContent = q.question;
 
-  // Clear and load option buttons
   optionsContainer.innerHTML = '';
   const letters = ['A', 'B', 'C', 'D'];
   
@@ -600,8 +687,6 @@ function loadQuestion(index) {
     optionsContainer.appendChild(btn);
   });
 
-  // Update Progress Bar: 12 questions total.
-  // We represent progress as (currentQuestionIndex) / 12 * 100
   const progressPercent = (index / activeQuestions.length) * 100;
   progressBarFill.style.width = `${progressPercent}%`;
 }
@@ -611,7 +696,6 @@ function selectOption(selectedIdx, btnElement) {
   const q = activeQuestions[gameState.currentQuestionIdx];
   const allOptionButtons = optionsContainer.querySelectorAll('.option-btn');
   
-  // Disable further clicks on option buttons
   allOptionButtons.forEach(btn => {
     btn.disabled = true;
     btn.style.pointerEvents = 'none';
@@ -620,38 +704,30 @@ function selectOption(selectedIdx, btnElement) {
   const isCorrect = (selectedIdx === q.correctIndex);
   
   if (isCorrect) {
-    // Answer is correct!
     gameState.score += q.marks;
     scoreDisplay.innerHTML = `${gameState.score} <span class="score-total">/ 115</span>`;
     btnElement.classList.add('correct-choice');
 
-    // Play specific sound: Hydrogen Pop Test gets special Pop effect!
     if (q.isHydrogenPop) {
       playSqueakyPopSound();
     } else {
       playCorrectSound();
     }
 
-    // Set feedback title and overlay classes
     feedbackPanel.className = 'feedback-panel correct';
     feedbackStatusTitle.textContent = "CORRECT!";
     feedbackScoreNotice.textContent = `+${q.marks} Marks Acquired`;
     feedbackScoreNotice.style.color = 'var(--color-success)';
     
-    // Icon
     feedbackStatusIcon.innerHTML = `
       <svg fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
       </svg>`;
   } else {
-    // Answer is incorrect!
     gameState.lives--;
     btnElement.classList.add('wrong-choice');
-    
-    // Highlight the correct one
     allOptionButtons[q.correctIndex].classList.add('correct-choice');
 
-    // Trigger visual shake on Card
     questionScreen.classList.add('shake-element', 'flash-red');
     setTimeout(() => {
       questionScreen.classList.remove('shake-element', 'flash-red');
@@ -660,27 +736,21 @@ function selectOption(selectedIdx, btnElement) {
     playIncorrectSound();
     updateLivesUI();
 
-    // Set feedback title and overlay classes
     feedbackPanel.className = 'feedback-panel incorrect';
     feedbackStatusTitle.textContent = "INCORRECT";
     feedbackScoreNotice.textContent = `0 Marks (Lost 1 Life)`;
     feedbackScoreNotice.style.color = 'var(--color-danger)';
 
-    // Icon
     feedbackStatusIcon.innerHTML = `
       <svg fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
       </svg>`;
   }
 
-  // Set Explanation text
   feedbackExplanation.textContent = q.explanation;
-
-  // Slide open Feedback Panel
   feedbackPanel.classList.remove('hidden');
 }
 
-// Update visual representation of lives
 function updateLivesUI() {
   for (let i = 1; i <= 3; i++) {
     const heart = document.getElementById(`heart-${i}`);
@@ -700,43 +770,35 @@ function updateLivesUI() {
 function continueGame() {
   feedbackPanel.classList.add('hidden');
 
-  // 1. Check if dead
   if (gameState.lives <= 0) {
     triggerGameOver("No Lives Remaining! You depleted your lives pool.");
     return;
   }
 
-  // 2. Track sector times
   const q = activeQuestions[gameState.currentQuestionIdx];
   const sectorTimeElapsed = Math.floor((Date.now() - gameState.sectorStartTime) / 1000);
   gameState.sectorTimes[q.sector] += sectorTimeElapsed;
 
-  // 3. Check if all questions are finished
   if (gameState.currentQuestionIdx >= activeQuestions.length - 1) {
-    // Victory! Set progress bar fill to 100%
     progressBarFill.style.width = '100%';
     triggerVictory();
     return;
   }
 
-  // 4. Move to next question
   const nextIdx = gameState.currentQuestionIdx + 1;
   const nextQ = activeQuestions[nextIdx];
   gameState.currentQuestionIdx = nextIdx;
 
-  // If entering a new sector, reset sector timer & play sector unlocked fanfare
   if (nextQ.sector !== q.sector) {
     playSectorUnlockedSound();
     startSectorTimer();
   } else {
-    // Reset timer start point for current sector question
     gameState.sectorStartTime = Date.now();
   }
 
   loadQuestion(gameState.currentQuestionIdx);
 }
 
-// Trigger Game Over Screen
 function triggerGameOver(reason) {
   if (gameState.timerInterval) {
     clearInterval(gameState.timerInterval);
@@ -745,23 +807,19 @@ function triggerGameOver(reason) {
 
   playGameOverSound();
 
-  // Hide header and normal card panels
   gameHeader.classList.add('hidden');
   questionScreen.classList.add('hidden');
   feedbackPanel.classList.add('hidden');
 
-  // Set values on Game Over Screen
   goReasonEl.textContent = reason;
   goScoreEl.textContent = gameState.score;
   
   const reachedQ = activeQuestions[gameState.currentQuestionIdx];
   goSectorEl.textContent = `Sector ${reachedQ.sector}: ${reachedQ.sectorName}`;
 
-  // Show Game Over card
   gameOverScreen.classList.remove('hidden');
 }
 
-// Trigger Victory Screen
 function triggerVictory() {
   if (gameState.timerInterval) {
     clearInterval(gameState.timerInterval);
@@ -770,23 +828,19 @@ function triggerVictory() {
 
   playVictorySound();
 
-  // Hide header and normal card panels
   gameHeader.classList.add('hidden');
   questionScreen.classList.add('hidden');
   feedbackPanel.classList.add('hidden');
 
-  // Compute stats
   vicScoreEl.textContent = gameState.score;
   vicLivesEl.textContent = `${gameState.lives} / 3`;
 
-  // Calculate average time per sector
   const totalSecs = Object.values(gameState.sectorTimes).reduce((a, b) => a + b, 0);
   const avgSecs = Math.floor(totalSecs / 4);
   const avgMins = Math.floor(avgSecs / 60);
   const avgRemainSecs = avgSecs % 60;
   vicTimeEl.textContent = `${avgMins.toString().padStart(2, '0')}:${avgRemainSecs.toString().padStart(2, '0')}`;
 
-  // Tailored final comment
   if (gameState.score === 115) {
     vicCommentEl.textContent = "Flawless Conquest! You achieved a perfect score of 115. Your mastery of cell structures, chemical configurations, circuit theory, and methodology parameters is exceptional. You are fully prepared for academic success!";
   } else if (gameState.score >= 90) {
@@ -795,10 +849,8 @@ function triggerVictory() {
     vicCommentEl.textContent = `Congratulations on completing the Gauntlet with ${gameState.score} marks! You survived, but there is room to sharpen your skills. Re-enter the Gauntlet to practice cell differences, electron shells, speed maths, and lab variables.`;
   }
 
-  // Show Victory card
   victoryScreen.classList.remove('hidden');
 }
-
 
 // 6. Bind Event Listeners
 btnBegin.addEventListener('click', startGame);
@@ -806,7 +858,6 @@ btnFeedbackContinue.addEventListener('click', continueGame);
 btnRestartGo.addEventListener('click', startGame);
 btnRestartVic.addEventListener('click', startGame);
 
-// Initialize game on load
 window.addEventListener('DOMContentLoaded', () => {
   shuffleQuestions();
   initGame();
